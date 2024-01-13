@@ -1,8 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Noto_Sans_SC } from 'next/font/google'
+import localFont from 'next/font/local'
+ 
 import './globals.css'
+import { NavigationContainer, NavigationLink } from '@/src/app/navigation'
+import Link from 'next/link'
 
-const inter = Inter({ subsets: ['latin'] })
+const noto = Noto_Sans_SC({
+  variable: '--font-noto',
+  subsets: ['latin']
+})
+// Font files can be colocated inside of `app`
+const unboundedSans = localFont({
+  src: '../public/font/UnboundedSans.woff2',
+  variable: '--font-unbound',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +29,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+
+      <body className={`${noto.variable} ${unboundedSans.variable}`}>
+        <NavigationContainer>
+        <Link href={'/students'}><NavigationLink>学生</NavigationLink></Link>
+        <Link href={'/'}><NavigationLink aria-selected>主页</NavigationLink></Link>
+        <Link href={'/class'}><NavigationLink>课程</NavigationLink></Link>
+      </NavigationContainer>
+        {children}
+        </body>
     </html>
   )
 }
