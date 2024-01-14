@@ -1,8 +1,8 @@
 import React from "react";
-import { UserProfile } from "../types/types";
+import { StudentProfile } from "../../../entities/students/types";
 import Image from "next/image";
 
-const userProfile: UserProfile = {
+const studentProfile: StudentProfile = {
   name: "王文慧",
   hometown: "江西吉安",
   phoneNumber: "18170654618",
@@ -37,12 +37,12 @@ export const StudentPageProfile = () => {
       <div className="flex-grow ">
         <div className="relative w-full mx-auto max-w-screen-md p-6">
           <div className=" flex gap-4 items-baseline">
-            <h2 className='text-6xl leading-none '>{userProfile.name}</h2>
-            <span className='text-zinc-500 text-xl'>({userProfile.name})</span>
+            <h2 className='text-6xl leading-none '>{studentProfile?.name}</h2>
+            <span className='text-zinc-500 text-xl'>({studentProfile?.name})</span>
           </div>
           <div className="mt-6">
             <p className="text-zinc-300 text-xl ">
-              {userProfile.selfEvaluation}
+              {studentProfile?.selfEvaluation}
             </p>
           </div>
         </div>
@@ -50,62 +50,62 @@ export const StudentPageProfile = () => {
         <div className="relative w-full mx-auto max-w-screen-md p-6   grid sm:grid-cols-2 gap-4">
           <h4 className="text-base flex-grow font-semibold">籍贯</h4>
           <div className=" flex-grow">
-            <p className='text-zinc-500 text-xl'>{userProfile.hometown}</p>
+            <p className='text-zinc-500 text-xl'>{studentProfile?.hometown}</p>
           </div>
         </div>
 
         <div className="relative w-full mx-auto max-w-screen-md p-6  grid sm:grid-cols-2 gap-4">
           <h4 className="text-base flex-grow font-semibold">电话号码</h4>
           <div className=" flex-grow">
-            <p className='text-zinc-500 text-xl'>{userProfile.phoneNumber}</p>
+            <p className='text-zinc-500 text-xl'>{studentProfile?.phoneNumber}</p>
           </div>
         </div>
 
         <div className="relative w-full mx-auto max-w-screen-md p-6  grid sm:grid-cols-2 gap-4">
           <h4 className="text-base flex-grow font-semibold">邮箱</h4>
           <div className=" flex-grow">
-            <p className='text-zinc-500 text-xl'>{userProfile.email}</p>
+            <p className='text-zinc-500 text-xl'>{studentProfile?.email}</p>
           </div>
         </div>
 
-        <div className="relative w-full mx-auto max-w-screen-md p-6 grid sm:grid-cols-2 gap-4">
+        {studentProfile.skills && <div className="relative w-full mx-auto max-w-screen-md p-6 grid sm:grid-cols-2 gap-4">
           <h4 className="text-base flex-grow font-semibold">掌握技能</h4>
           <div className=" flex-grow">
             <ul className="flex flex-wrap gap-2">
-              {userProfile.skills.map(item => {
+              {studentProfile?.skills.map(item => {
                 return <li key={item}>
                   <h6><span className='block px-4 border border-zinc-800 rounded-full bg-white bg-opacity-10 backdrop-blur-md leading-none py-1.5 pb-2 text-zinc-500 text-base'>{item}</span></h6>
                 </li>
               })}
             </ul>
           </div>
-        </div>
+        </div>}
 
-        <div className="relative w-full mx-auto max-w-screen-md p-6 grid sm:grid-cols-2 gap-4">
+        {studentProfile.practicalExperience && <div className="relative w-full mx-auto max-w-screen-md p-6 grid sm:grid-cols-2 gap-4">
           <h4 className="text-base flex-grow font-semibold">能力实践经验</h4>
           <div className=" flex-grow">
             <ul className="flex flex-wrap gap-2">
-              {userProfile.practicalExperience.map(item => {
+              {studentProfile?.practicalExperience.map(item => {
                 return <li key={item}>
                   <h6 className="text-zinc-500 text-xl ">{item}</h6>
                 </li>
               })}
             </ul>
           </div>
-        </div>
+        </div>}
 
-        <div className="relative w-full mx-auto max-w-screen-md p-6 grid sm:grid-cols-2 gap-4">
+        {studentProfile.personalAwards && <div className="relative w-full mx-auto max-w-screen-md p-6 grid sm:grid-cols-2 gap-4">
           <h4 className="text-base flex-grow font-semibold">能力实践经验</h4>
           <div className=" flex-grow">
             <ul className="flex flex-wrap gap-2">
-              {userProfile.personalAwards.map(item => {
+              {studentProfile?.personalAwards.map(item => {
                 return <li key={item}>
                   <h6 className="text-zinc-500 text-xl ">{item}</h6>
                 </li>
               })}
             </ul>
           </div>
-        </div>
+        </div>}
 
 
 
