@@ -1,6 +1,6 @@
 import { StudentProfile } from "./types";
 
-export const studentProfilesProfile: StudentProfile[] = [
+export const studentProfiles: StudentProfile[] = [
   {
     name: "代琪",
     hometown: "江西九江",
@@ -51,7 +51,6 @@ export const studentProfilesProfile: StudentProfile[] = [
     email: "3600248086@qq.com",
     skills: ["ps", "ai", "ae", "id", "br", "pr", "c4d"],
     selfEvaluation: "性格乐观开朗，对生活充满热情；兴趣广泛，爱好音乐，体育活动，有健康的体魄；具有快速的适应能力和较强的学习能力",
-    practicalExperience: [],
     personalAwards: [
       "绍兴市大学生广告大赛纹样三等奖",
       "“海宁杯”纹样设计入围奖"
@@ -118,7 +117,6 @@ export const studentProfilesProfile: StudentProfile[] = [
     email: "631964161@qq.com",
     skills: ["Ps", "Ai", "Ae", "Id", "Pr", "Cdr"],
     selfEvaluation: "自学能力强，积极进取，做事情认真负责，敢于尝试新事物",
-    practicalExperience: [],
     personalAwards: [
       "绍兴市第七届大学生文创产业与艺术设计大赛插画类二等奖",
       "绍兴市第七届大学生文创产业与艺术设计文旅IP形象设计三等奖",
@@ -141,6 +139,33 @@ export const studentProfilesProfile: StudentProfile[] = [
       "绍兴市第七届大学生文创产业与艺术竞赛平面类设计类二等奖"
     ],
     studentNumber: "21048127"
+  },
+
+  {
+    name: "徐可",
+    hometown: "浙江绍兴",
+    phoneNumber: "15167518153",
+    email: "1306484225@qq.com",
+    skills: ["ps", "ai", "ae", "id", "br", "pr", "c4d"],
+    selfEvaluation: "性格开朗，胆大心细，完美主义，有较强责任心和组织领导水平",
+    practicalExperience: [
+      "2021年到2023年在松风书院、青蓝等艺术培训机构进行书法、绘画教学"
+    ],
+    personalAwards: [
+      "第 15 届全国大学生广告艺术大赛平面类优秀奖",
+      "首届“两山杯”全国大学生乡村振兴创新创意创业大赛创意赛道一等奖",
+      "首届“花开五四——莫干山全国青年空间艺术创意大赛”入展",
+      "第九届浙江省大学生经济管理案例竞赛一等奖",
+      "第六届浙江省大学生乡村振兴创意大赛金奖",
+      "第九届浙江省国际“互联网＋”大学生创新创业大赛银奖",
+      "第十八届浙江省大学生电子商务竞赛三等奖",
+      "第十一届浙江省大学生广告创意设计竞赛优秀奖",
+      "首届“花开五四——莫干山全国青年空间艺术创意大赛”入展",
+      "省政府奖学金",
+      "综合奖学金",
+      "单项奖学金"
+    ],
+    studentNumber: "21048120"
   },
 
   {

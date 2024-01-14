@@ -1,8 +1,13 @@
 import React from "react";
 import { StudentPageProfile } from "./ui/profile";
+import { StudentProfile } from "@/src/entities/students/types";
 
-export const StudentPage = () => {
+interface StudentPageProps {
+  student: StudentProfile
+}
+
+export const StudentPage: React.FC<StudentPageProps> = ({ student }) => {
   return <div className="pt-24">
-    <StudentPageProfile />
+    <StudentPageProfile student={student} />
   </div>
 }

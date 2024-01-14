@@ -1,10 +1,10 @@
-import { Groups } from "./types";
-import { studentProfilesProfile } from "../students/info";
+import { Group } from "./types";
+import { studentProfiles } from "../students/info";
 
 
-export const groups: Groups[] = [
+export const groups: Group[] = [
   {
     name: '211',
-    students: studentProfilesProfile
+    students: studentProfiles
   }
 ]
