@@ -20,7 +20,7 @@ export const MainPageStudentGroup: React.FC<MainPageStudentGroupProps> = ({ grou
       <div className="relative w-full mx-auto max-w-screen-md border-x border-zinc-800 p-6">
         <div className="flex flex-wrap justify-between gap-4 items-end">
           <h2 className='text-6xl leading-none '>{group.name}</h2>
-          <span className='px-4 border border-zinc-800 rounded-full bg-white bg-opacity-10 backdrop-blur-md leading-none py-2 text-zinc-500 text-base '>`${group.name}班：${group.students.length} 学生`</span>
+          <span className='px-4 border border-zinc-800 rounded-full bg-white bg-opacity-10 backdrop-blur-md leading-none py-2 text-zinc-500 text-base '>{group.name}班：{group.students.length} 学生</span>
         </div>
         <div className="mt-10">
           <Link href={`/groups/${group.name}`}>
@@ -73,8 +73,8 @@ const StudentsReel = ({ reversed = false, students }: StudentsReelProps) => {
       {students.map(student => {
         return (
           <div className='my-reel-item flex flex-col gap-2' key={student.studentNumber}>
-            <div className='bg-orange-500 rounded-xl w-96 max-w-[80vw] aspect-[2/3]'>
-              {student.studentNumber}
+            <div className='bg-orange-500 relative overflow-hidden rounded-xl w-96 max-w-[80vw] aspect-[2/3]'>
+              <Image fill src={`/students/${student.name}${student.studentNumber}/个人照片.jpg`} alt="student image" className=" object-cover" />
             </div>
           </div>
         )

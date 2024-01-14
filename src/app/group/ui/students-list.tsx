@@ -31,7 +31,9 @@ export const StudentGroupPageStudentsList: React.FC<StudentGroupPageStudentsList
             return (
               <Link key={student.studentNumber} href={`/students/${student.studentNumber}`}>
                 <div className='w-full flex flex-col gap-2' >
-                  <div className='bg-orange-500 rounded-xl w-full aspect-[3/4]'></div>
+                  <div className='bg-orange-500 relative overflow-hidden rounded-xl w-full aspect-[3/4]'>
+                    <Image fill src={`/students/${student.name}${student.studentNumber}/个人照片.jpg`} alt="student image" className=" object-cover" />
+                  </div>
                   <p className='text-zinc-500 text-xl leading-none'>{student.name}</p>
                 </div>
               </Link>
