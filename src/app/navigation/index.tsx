@@ -18,7 +18,7 @@ export const NavigationLink: React.FC<React.HTMLProps<HTMLDivElement>> = ({ chil
 
 export const Navigation = () => {
   const currentPath = usePathname();
-  console.log(currentPath)
+
   return <NavigationContainer>
     <Link href={'/students'}><NavigationLink aria-selected={currentPath.includes('/students')}>学生</NavigationLink></Link>
     <Link href={'/'}><NavigationLink aria-selected={currentPath === '/'}>主页</NavigationLink ></Link>

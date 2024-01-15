@@ -10,11 +10,7 @@ export default function AppStudentGroupPage({ params }: { params: { slug: string
 
 
   const group = findGroup(params.slug);
-  if (group) {
-    console.log("Student found:", group);
-  } else {
-    console.log("Student not found");
-  }
+
   return (
     <main>
       {group && <StudentGroupPage group={group} ></StudentGroupPage>}

@@ -307,11 +307,11 @@ export const studentProfiles: StudentProfile[] = [
       {
         name: '平装书',
         images: [
-          'image1.jpg',
-          'image2.jpg',
-          'image3.jpg',
-          'image4.jpg',
-          'image5.jpg',
+          'image1.png',
+          'image2.png',
+          'image3.png',
+          'image4.png',
+          'image5.png',
         ],
         video: 'video.mp4',
         qr: 'qr.png'
