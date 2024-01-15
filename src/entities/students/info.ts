@@ -21,7 +21,20 @@ export const studentProfiles: StudentProfile[] = [
       "绍兴市第二届大学生广告艺术竞赛三等奖",
       "获两次单项奖学金"
     ],
-    studentNumber: "21048102"
+    studentNumber: "21048102",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+          'image4.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -31,7 +44,21 @@ export const studentProfiles: StudentProfile[] = [
     email: "1607244723@qq.com",
     skills: ["Ps", "Ai", "Id", "An", "Ae", "Cdr"],
     selfEvaluation: "性格开朗，善于人际沟通与交流，较好的团队精神与团队荣誉感。",
-    studentNumber: "21048105"
+    studentNumber: "21048105",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.png',
+          'image2.png',
+          'image3.png',
+          'image4.png',
+          'image5.png',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -41,7 +68,20 @@ export const studentProfiles: StudentProfile[] = [
     email: "2236703650@qq.com",
     skills: ["Ps", "Ai", "Ae", "Id", "Pr", "CoreIDRW", "Procreate"],
     selfEvaluation: "性格开朗，积极乐观，为人友善，有责任心",
-    studentNumber: "21048111"
+    studentNumber: "21048111",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+          'image4.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -55,7 +95,20 @@ export const studentProfiles: StudentProfile[] = [
       "绍兴市大学生广告大赛纹样三等奖",
       "“海宁杯”纹样设计入围奖"
     ],
-    studentNumber: "21144123"
+    studentNumber: "21144123",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+          'image4.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -80,7 +133,19 @@ export const studentProfiles: StudentProfile[] = [
       "综合奖学金",
       "单项奖学金"
     ],
-    studentNumber: "21048128"
+    studentNumber: "21048128",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -93,7 +158,19 @@ export const studentProfiles: StudentProfile[] = [
     practicalExperience: [
       "在教育机构和艺术培训机构进行教书、教学"
     ],
-    studentNumber: "21048126"
+    studentNumber: "21048126",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -122,7 +199,19 @@ export const studentProfiles: StudentProfile[] = [
       "绍兴市第七届大学生文创产业与艺术设计文旅IP形象设计三等奖",
       "绍兴市第二届大学生广告艺术竞赛三等奖"
     ],
-    studentNumber: "21048125"
+    studentNumber: "21048125",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -138,7 +227,20 @@ export const studentProfiles: StudentProfile[] = [
       "绍兴市第七届大学生文创产业与艺术竞赛IP形象设计类二等奖",
       "绍兴市第七届大学生文创产业与艺术竞赛平面类设计类二等奖"
     ],
-    studentNumber: "21048127"
+    studentNumber: "21048127",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+          'image4.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -165,7 +267,26 @@ export const studentProfiles: StudentProfile[] = [
       "综合奖学金",
       "单项奖学金"
     ],
-    studentNumber: "21048120"
+    studentNumber: "21048120",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+          'image4.jpg',
+          'image5.jpg',
+          'image6.jpg',
+          'image7.jpg',
+          'image8.jpg',
+          'image9.jpg',
+          'image10.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -181,7 +302,21 @@ export const studentProfiles: StudentProfile[] = [
       "绍兴市大广赛三等奖",
       "获三次单项奖学金"
     ],
-    studentNumber: "21048104"
+    studentNumber: "21048104",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+          'image4.jpg',
+          'image5.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -194,7 +329,19 @@ export const studentProfiles: StudentProfile[] = [
     practicalExperience: [
       "2022年到2023年在台州、绍兴、常德等地做独立摄影师"
     ],
-    studentNumber: "21048110"
+    studentNumber: "21048110",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -204,7 +351,19 @@ export const studentProfiles: StudentProfile[] = [
     email: "1572079006@qq.com",
     skills: ["Ps", "Ai", "Id", "An", "Ae", "Cdr"],
     selfEvaluation: "性格稳定，有较强的责任感和团队意识。",
-    studentNumber: "21048123"
+    studentNumber: "21048123",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.png',
+          'image2.png',
+          'image3.png',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -226,7 +385,20 @@ export const studentProfiles: StudentProfile[] = [
       "2023年浙江省大学生广告设计大赛策划类优秀奖",
       "2023年全国生命科学竞赛二等奖"
     ],
-    studentNumber: "21048108"
+    studentNumber: "21048108",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.png',
+          'image2.png',
+          'image3.png',
+          'image4.png',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -251,7 +423,22 @@ export const studentProfiles: StudentProfile[] = [
       "绍兴市第二届大学生广告艺术竞赛一等奖、二等奖、三等奖两次",
       "获综合三等奖学金一次，单项奖学金四次"
     ],
-    studentNumber: "21048117"
+    studentNumber: "21048117",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+          'image4.jpg',
+          'image5.jpg',
+          'image6.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -269,7 +456,21 @@ export const studentProfiles: StudentProfile[] = [
       "2023绍兴市第七届大学生文创产业与艺术大赛插画组三等奖",
       "2023公共艺术课程校展一等奖"
     ],
-    studentNumber: "21048114"
+    studentNumber: "21048114",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.png',
+          'image2.png',
+          'image3.png',
+          'image4.png',
+          'image5.png',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -293,7 +494,22 @@ export const studentProfiles: StudentProfile[] = [
       "2023绍兴市第七届大学生文创产业与艺术设计大赛文旅IP形象设计三等奖",
       "2023绍兴市第七届大学生文创产业与艺术设计大赛纹样设计三等奖"
     ],
-    studentNumber: "21144116"
+    studentNumber: "21144116",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.png',
+          'image2.png',
+          'image3.png',
+          'image4.png',
+          'image5.png',
+          'image6.png',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   },
 
   {
@@ -311,7 +527,22 @@ export const studentProfiles: StudentProfile[] = [
       "绍兴市第七届大学生文创产业与艺术设计竞赛纹样二等奖",
       "绍兴市第七届大学生文创产业与艺术设计竞赛插画二等奖"
     ],
-    studentNumber: "21048118"
+    studentNumber: "21048118",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+          'image4.jpg',
+          'image5.jpg',
+          'image6.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
   }
 
 ]
