@@ -14,7 +14,8 @@ export const StudentsGroupPageHero: React.FC<StudentsGroupPageHeroProps> = ({ na
     </div>
 
     <div className="px-8 mt-20 md:mt-32">
-      <div className="bg-orange-500 rounded-xl w-full aspect-video"></div>
+      <div className="bg-zinc-900 relative rounded-xl w-full aspect-video">
+        <video muted loop playsInline autoPlay controls src={`/groups/${name}/intro-vid.mp4`} className="object-fit absolute w-full h-full top-0 left-0 right-0 bottom-0"></video>      </div>
     </div>
   </div>
 }
