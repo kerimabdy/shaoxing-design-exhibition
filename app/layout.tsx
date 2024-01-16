@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 
 import './globals.css'
 import { Navigation } from '@/src/app/navigation'
+import { NoiseLayer } from '@/src/shared/components/ui/noise'
 
 const noto = Noto_Sans_SC({
   variable: '--font-noto',
@@ -32,9 +33,10 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className={`${noto.variable} ${unboundedSans.variable}`}>
+      <body className={`${noto.variable} ${unboundedSans.variable} relative`}>
         <Navigation />
         {children}
+        <NoiseLayer />
       </body>
     </html>
   )
