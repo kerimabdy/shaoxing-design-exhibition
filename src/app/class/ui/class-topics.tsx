@@ -19,7 +19,7 @@ export const ClassPageClassTopics = () => {
           return <AccordionItem key={item.name} value={item.name}>
             <AccordionTrigger>{item.name}</AccordionTrigger>
             <AccordionContent>
-              <div className='bg-orange-500 overflow-hidden mb-6 relative rounded-xl max-w-full w-80 aspect-[4/3]'>
+              <div className='bg-orange-500 overflow-hidden mb-6 relative rounded-xl w-full aspect-[4/3]'>
                 <Image src={`/class-images/${item.image}`} className='object-cover' fill alt={item.name} />
               </div>
               <p>{item.description}</p>            </AccordionContent>

@@ -97,7 +97,7 @@ body {
   }
 
   body {
-    @apply bg-black text-white font-sans;
+    @apply bg-zinc-900 text-white font-sans;
   }
 }
 
@@ -116,6 +116,9 @@ h2 {
 
 .shake {
   animation: shaking 0.35s infinite;
+}
+.rotating {
+  animation: rotating 10s infinite linear;
 }
 
 @keyframes shaking {
@@ -163,3 +166,14 @@ h2 {
     transform: translateX(0) translateY(0)
   }
 }
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
