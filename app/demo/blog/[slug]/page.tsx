@@ -1,4 +1,4 @@
-import BlogPage from "@/src/pages/demo/blog";
+import BlogPage from "@/src/page/demo/blog";
 import client from "@/tina/__generated__/client";
 import { Metadata, ResolvingMetadata } from "next";
 import { useTina } from "tinacms/dist/react";

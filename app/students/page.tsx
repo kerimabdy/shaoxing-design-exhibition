@@ -1,4 +1,4 @@
-import { StudentGroupPageStudentsList } from "@/src/pages/group/ui/students-list";
+import { StudentGroupPageStudentsList } from "@/src/page/group/ui/students-list";
 import { studentProfiles } from "@/src/entities/students/info";
 
 export default function StudentsPage() {

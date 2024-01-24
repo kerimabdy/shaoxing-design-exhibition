@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-export const MainPageClassIntro = () => {
+export const ClassIntro = () => {
   return <div className=" w-full border-t border-zinc-800 px-8">
     <div className="relative w-full mx-auto max-w-screen-md border-x border-zinc-800 p-6">
       <div className="flex flex-wrap gap-4 items-baseline">

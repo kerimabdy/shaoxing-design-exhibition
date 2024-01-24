@@ -1,4 +1,4 @@
-import { ClassPage } from "@/src/pages/class";
+import { ClassPage } from "@/src/page/class";
 
 export default function AppClassPage() {
   return <main><ClassPage /></main>

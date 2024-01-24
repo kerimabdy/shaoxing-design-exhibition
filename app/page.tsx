@@ -1,4 +1,4 @@
-import { MainPage } from '@/src/pages/main';
+import { MainPage } from '@/src/page/main';
 
 
 
