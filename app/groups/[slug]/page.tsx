@@ -1,4 +1,4 @@
-import { StudentGroupPage } from "@/src/app/group";
+import { StudentGroupPage } from "@/src/pages/group";
 import { groups } from "@/src/entities/groups/info";
 import { Group } from "@/src/entities/groups/types";
 

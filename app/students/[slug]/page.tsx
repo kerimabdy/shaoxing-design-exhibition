@@ -1,4 +1,4 @@
-import { StudentPage } from "@/src/app/student/intex";
+import { StudentPage } from "@/src/pages/student/intex";
 import { studentProfiles } from "@/src/entities/students/info";
 import { StudentProfile } from "@/src/entities/students/types";
 

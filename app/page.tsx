@@ -1,4 +1,4 @@
-import { MainPage } from '@/src/app/main';
+import { MainPage } from '@/src/pages/main';
 
 
 
@@ -6,8 +6,8 @@ import { MainPage } from '@/src/app/main';
 
 export default function Home() {
   return (
-   <main>
-    <MainPage></MainPage>
-   </main>
+    <main>
+      <MainPage></MainPage>
+    </main>
   )
 }
