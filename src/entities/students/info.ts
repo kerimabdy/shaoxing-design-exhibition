@@ -345,6 +345,33 @@ export const studentProfiles: StudentProfile[] = [
   },
 
   {
+    name: "阿比",
+    hometown: "土库曼斯坦",
+    phoneNumber: "18367519670",
+    email: "kerim060620@gmail.com",
+    skills: ["Ps", "Ai", "Ae", "Id", "Blender", "Pr", "Figma"],
+    selfEvaluation: "性情乐观，勇敢且细心，具备良好的沟通能力，拥有强烈的责任感和高效的活动组织能力",
+    practicalExperience: [
+      "2020年到2022年在阿什哈巴德、土库曼斯坦、“Aryketek” 设计办公室",
+      "2022年到现在在阿什哈巴德、土库曼斯坦、“Belet” 科技公司，UI/UX 设计师",
+    ],
+    studentNumber: "19527101",
+    projects: [
+      {
+        name: '平装书',
+        images: [
+          'image1.jpg',
+          'image2.jpg',
+          'image3.jpg',
+          'image4.jpg',
+        ],
+        video: 'video.mp4',
+        qr: 'qr.png'
+      }
+    ]
+  },
+
+  {
     name: "杨梦婷",
     hometown: "浙江温州",
     phoneNumber: "17363541062",
