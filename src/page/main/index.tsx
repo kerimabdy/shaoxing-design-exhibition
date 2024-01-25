@@ -18,10 +18,20 @@ export const MainPage = (props: {
   const { data } = useTina(props)
   return (
     <div>
-      <MainPageHero {...data.mainPage} />
+      <MainPageHero {...data.pages} />
       <MainPageClassTopics {...data.topicConnection} />
-      <ClassIntro />
-      <MainPageStamp />
+      {data.pages.blocks?.map(block => {
+        switch (block?.__typename) {
+          case "PagesBlocksCourseIntroduction":
+            return <ClassIntro {...block} />
+          case "PagesBlocksStamp":
+            return <MainPageStamp {...block} />
+          default:
+            return <></>
+        }
+      })
+      }
+
       {groups.map(group => {
         return <MainPageStudentGroup key={group.name} group={group} />
       })}

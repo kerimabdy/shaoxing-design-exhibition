@@ -1,7 +1,7 @@
 
 
 query mainPageContent($relativePath: String!, $before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: TopicFilter) {
-  mainPage(relativePath: $relativePath) {
+  pages(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -13,7 +13,7 @@ query mainPageContent($relativePath: String!, $before: String, $after: String, $
       }
       id
     }
-    ...MainPageParts
+    ...PagesParts
   }
 
    topicConnection(

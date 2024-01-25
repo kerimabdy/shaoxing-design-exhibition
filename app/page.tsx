@@ -15,10 +15,10 @@ export async function generateMetadata(
   const slug = params.slug
 
   // fetch data
-  const result = await client.queries.mainPageContent({ relativePath: `main-page.md` })
+  const result = await client.queries.mainPageContent({ relativePath: `main.md` })
 
   return {
-    title: result.data.mainPage.title,
+    title: result.data.pages.title,
   }
 }
 
@@ -29,7 +29,7 @@ export default async function Home({
   params,
 }: Props) {
 
-  const result = await client.queries.mainPageContent({ relativePath: `main-page.md` })
+  const result = await client.queries.mainPageContent({ relativePath: `main.md` })
   return (
     <main>
       <MainPage {...result}></MainPage>
