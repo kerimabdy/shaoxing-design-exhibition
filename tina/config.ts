@@ -1,5 +1,6 @@
 import { defineConfig } from "tinacms";
 import Topic from "./collection/topics";
+import MainPage from "./collection/main-page";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -30,6 +31,7 @@ export default defineConfig({
   schema: {
     collections: [
       Topic,
+      MainPage,
       {
         name: "post",
         label: "Posts",

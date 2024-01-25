@@ -1,13 +1,38 @@
 import { MainPage } from '@/src/page/main';
+import client from '@/tina/__generated__/client';
+import { Metadata, ResolvingMetadata } from 'next';
 
+type Props = {
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const slug = params.slug
+
+  // fetch data
+  const result = await client.queries.mainPageContent({ relativePath: `main-page.md` })
+
+  return {
+    title: result.data.mainPage.title,
+  }
+}
 
 
 // 14.407vw
+// main - page
+export default async function Home({
+  params,
+}: Props) {
 
-export default function Home() {
+  const result = await client.queries.mainPageContent({ relativePath: `main-page.md` })
   return (
     <main>
-      <MainPage></MainPage>
+      <MainPage {...result}></MainPage>
     </main>
   )
 }

@@ -4,14 +4,16 @@ import Reeller from 'reeller';
 import gsap from 'gsap';
 import { classTopics } from '@/src/entities/class/info';
 import Image from 'next/image';
-import { ClassTopics } from '@/src/entities/class/types';
+import { MainPageContentQuery, Topic } from '@/tina/__generated__/types';
+import { tinaField } from 'tinacms/dist/react';
 
 Reeller.registerGSAP(gsap);
 
 
-export const MainPageClassTopics = () => {
+export const MainPageClassTopics = (props: MainPageContentQuery['topicConnection']) => {
   const indexToSplit = 10;
-  const original = [...classTopics]
+  const classTopics = props.edges
+  const original = classTopics?.map(topic => topic?.node) as Topic[]
   const firstHalf = original.splice(0, indexToSplit);
   const secondHalf = original;
   return <div className='flex flex-col gap-4 py-8 border-t border-zinc-800'>
@@ -23,7 +25,7 @@ export const MainPageClassTopics = () => {
 
 
 interface TopicsReelerProps {
-  topics: ClassTopics[];
+  topics: Topic[];
   reversed?: boolean
 }
 
@@ -47,11 +49,11 @@ const TopicsReeler = ({ reversed = false, topics }: TopicsReelerProps) => {
     <div ref={wrapper} className="flex gap-6">
       {topics.map(item => {
         return (
-          <div className='my-reel-item flex flex-col gap-2' key={item.name}>
+          <div data-tina-field={tinaField(item, 'title')} className='my-reel-item flex flex-col gap-2' key={item?.title}>
             <div className='bg-orange-500 overflow-hidden relative rounded-xl w-96 max-w-[80vw] aspect-[4/3]'>
-              <Image src={`/class-images/${item.image}`} className='object-cover' fill alt={item.name} />
+              <Image src={item?.heroImg || ''} className='object-cover' fill alt={item?.title} />
             </div>
-            <span className='text-zinc-500 text-xl leading-none'>({item.name})</span>
+            <span className='text-zinc-500 text-xl leading-none'>({item?.title})</span>
           </div>
         )
       })}
