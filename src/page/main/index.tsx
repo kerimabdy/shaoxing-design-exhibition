@@ -1,8 +1,8 @@
 'use client'
 import React from "react"
 import { MainPageHero } from "./ui/hero"
-import { MainPageClassTopics } from "./ui/class-topics"
-import { ClassIntro } from "./ui/class-intro"
+import { MainPageClassTopics } from "./ui/course-topics"
+import { CourseIntro } from "./ui/course-intro"
 import { MainPageStudentGroup } from "./ui/student-group"
 import { MainPageStamp } from "./ui/stamp"
 import { groups } from "@/src/entities/groups/info"
@@ -23,11 +23,9 @@ export const MainPage = (props: {
       {data.pages.blocks?.map(block => {
         switch (block?.__typename) {
           case "PagesBlocksCourseIntroduction":
-            return <ClassIntro {...block} />
+            return <CourseIntro key={block.__typename} {...block} />
           case "PagesBlocksStamp":
-            return <MainPageStamp {...block} />
-          default:
-            return <></>
+            return <MainPageStamp key={block.__typename} {...block} />
         }
       })
       }

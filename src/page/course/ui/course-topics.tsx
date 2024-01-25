@@ -1,11 +1,13 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/src/shared/components/ui/accordion";
 import React from "react";
 import Image from "next/image";
-import { classTopics } from "@/src/entities/class/info";
+import { MainPageContentQuery, Topic } from "@/tina/__generated__/types";
+import { tinaField } from "tinacms/dist/react";
 
 
 
-export const ClassPageClassTopics = () => {
+export const CoursePageCourseTopics = (props: MainPageContentQuery["topicConnection"]) => {
+  const courseTopics = props.edges?.map(topic => topic?.node) as Topic[]
   return <div className=" w-full border-t border-zinc-800 px-8 pb-8">
     <div className="relative w-full mx-auto max-w-screen-md border-x border-zinc-800">
       <div className="absolute -top-[100.5px] -right-[100.5px] ">
@@ -15,12 +17,12 @@ export const ClassPageClassTopics = () => {
         <Image alt="star icon" unoptimized src='/image/star.svg' width={200} height={200}></Image>
       </div>
       <Accordion type="single" collapsible>
-        {classTopics.map(item => {
-          return <AccordionItem key={item.name} value={item.name}>
-            <AccordionTrigger>{item.name}</AccordionTrigger>
+        {courseTopics.map(item => {
+          return <AccordionItem data-tina-field={tinaField(item, "title")} key={item.title} value={item.title}>
+            <AccordionTrigger>{item.title}</AccordionTrigger>
             <AccordionContent>
               <div className='bg-orange-500 overflow-hidden mb-6 relative rounded-xl w-full aspect-[4/3]'>
-                <Image src={`/class-images/${item.image}`} className='object-cover' fill alt={item.name} />
+                <Image src={item.heroImg || ""} className='object-cover' fill alt={item.title} />
               </div>
               <p>{item.description}</p>            </AccordionContent>
           </AccordionItem>

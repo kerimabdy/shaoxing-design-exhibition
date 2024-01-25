@@ -22,6 +22,6 @@ export const Navigation = () => {
   return <NavigationContainer>
     <Link href={'/students'}><NavigationLink aria-selected={currentPath.includes('/students')}>学生</NavigationLink></Link>
     <Link href={'/'}><NavigationLink aria-selected={currentPath === '/'}>主页</NavigationLink ></Link>
-    <Link href={'/class'}><NavigationLink aria-selected={currentPath.includes('/class')}>课程</NavigationLink></Link>
+    <Link href={'/course'}><NavigationLink aria-selected={currentPath.includes('/class')}>课程</NavigationLink></Link>
   </NavigationContainer>
 }

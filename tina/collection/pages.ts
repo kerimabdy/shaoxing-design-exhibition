@@ -10,6 +10,8 @@ const Pages: Collection = {
       switch (props.document._sys.filename) {
         case "main":
           return "/"
+        case "course":
+          return "/course"
       }
     },
   },

@@ -4,7 +4,7 @@ import React from "react";
 import { tinaField } from "tinacms/dist/react";
 
 
-export const ClassIntro = (props: {
+export const CourseIntro = (props: {
   __typename: "PagesBlocksCourseIntroduction";
   title?: string | null | undefined;
   description?: string | null | undefined;
