@@ -1,6 +1,7 @@
 import { defineConfig } from "tinacms";
 import Topic from "./collection/topics";
 import Pages from "./collection/pages";
+import Student from "./collection/student";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -23,7 +24,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "uploads",
       publicFolder: "public",
     },
   },
@@ -32,6 +33,7 @@ export default defineConfig({
     collections: [
       Topic,
       Pages,
+      Student,
       // CourseIntroductionCollection,
       {
         name: "post",

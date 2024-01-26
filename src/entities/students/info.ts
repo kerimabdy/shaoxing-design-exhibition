@@ -1,41 +1,6 @@
 import { StudentProfile } from "./types";
 
 export const studentProfiles: StudentProfile[] = [
-  {
-    name: "代琪",
-    hometown: "江西九江",
-    phoneNumber: "17770225565",
-    email: "1807496968@qq.com",
-    skills: ["Ps", "Ai", "Id", "An", "Ae", "Cdr"],
-    selfEvaluation: "有较强的沟通能力、性格开朗、完美主义，有较强责任心和组织能力",
-    practicalExperience: [
-      "2022年10月到2022年11月在希望美术艺术培训机构绘画教学"
-    ],
-    personalAwards: [
-      "第 15 届全国大学生广告艺术大赛平面类国家级二等奖",
-      "绍兴市第七届大学生文创产业与艺术设计大赛插画类二等奖",
-      "绍兴市第七届大学生文创产业与艺术设计大赛纹样类二等奖",
-      "绍兴市高校艾滋病性病防治宣传方案及科普作品评选大赛二等奖",
-      "绍兴市第二届大学生广告艺术竞赛一等奖",
-      "绍兴市第二届大学生广告艺术竞赛二等奖",
-      "绍兴市第二届大学生广告艺术竞赛三等奖",
-      "获两次单项奖学金"
-    ],
-    studentNumber: "21048102",
-    projects: [
-      {
-        name: '平装书',
-        images: [
-          'image1.jpg',
-          'image2.jpg',
-          'image3.jpg',
-          'image4.jpg',
-        ],
-        video: 'video.mp4',
-        qr: 'qr.png'
-      }
-    ]
-  },
 
   {
     name: "冯健炫",
