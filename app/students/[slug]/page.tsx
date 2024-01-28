@@ -1,12 +1,7 @@
 import { StudentPage } from "@/src/page/student/intex";
-import { studentProfiles } from "@/src/entities/students/info";
-import { StudentProfile } from "@/src/entities/students/types";
 import { Metadata, ResolvingMetadata } from "next";
 import client from "@/tina/__generated__/client";
 
-const findStudent = (studentNumber: string): StudentProfile | undefined => {
-  return studentProfiles.find(student => student.studentNumber === studentNumber);
-};
 
 type Props = {
   params: { slug: string }
@@ -22,7 +17,7 @@ export async function generateMetadata(
   const result = await client.queries.student({ relativePath: `${params.slug}.md` })
 
   return {
-    title: 'result.data.student.name',
+    title: result.data.student.name,
   }
 }
 

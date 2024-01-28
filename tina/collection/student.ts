@@ -85,7 +85,11 @@ const Student: Collection = {
           type: "string",
           label: "label",
           name: "label",
+          ui: {
+            component: "textarea"
+          }
         },
+
       ]
     },
     {
@@ -103,6 +107,9 @@ const Student: Collection = {
           type: "string",
           label: "label",
           name: "label",
+          ui: {
+            component: "textarea"
+          }
         },
       ]
     },
@@ -114,7 +121,7 @@ const Student: Collection = {
       ui: {
         itemProps: (item) => {
           return { label: item.label }
-        }
+        },
       },
       fields: [
         {
@@ -127,6 +134,12 @@ const Student: Collection = {
           name: "images",
           type: "object",
           list: true,
+          ui: {
+            itemProps: (item) => {
+              console.log(item)
+              return { label: item.image }
+            },
+          },
           fields: [
             {
               type: "image",
