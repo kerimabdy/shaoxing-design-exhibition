@@ -4,7 +4,12 @@ const Student: Collection = {
   label: "Student",
   name: "student",
   path: "content/students",
-  format: "mdx",
+  format: "md",
+  ui: {
+    router: (props) => {
+      return `students/${props.document._sys.filename}`
+    },
+  },
   fields: [
     {
       type: "string",

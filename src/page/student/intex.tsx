@@ -1,15 +1,20 @@
+"use client"
 import React from "react";
 import { StudentPageProfile } from "./ui/profile";
-import { StudentProfile } from "@/src/entities/students/types";
 import { StudentPageProject } from "./ui/project";
+import { StudentQuery } from "@/tina/__generated__/types";
+import { useTina } from "tinacms/dist/react";
 
-interface StudentPageProps {
-  student: StudentProfile
-}
 
-export const StudentPage: React.FC<StudentPageProps> = ({ student }) => {
+export const StudentPage = (props: {
+  data: StudentQuery
+  variables: {}
+  query: string
+}) => {
+  const { data } = useTina(props)
   return <div className="pt-24">
-    <StudentPageProfile student={student} />
-    {student.projects?.map(project => <StudentPageProject key={project.name} project={project} studentNameID={`${student.name}${student.studentNumber}`} />)}
+    <StudentPageProfile {...data} />
+    {data.student.projects?.map(project => <StudentPageProject key={project?.label} {...project} />)
+    }
   </div>
-}
+}     
