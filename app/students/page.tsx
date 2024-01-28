@@ -1,8 +1,16 @@
 import { StudentGroupPageStudentsList } from "@/src/page/group/ui/students-list";
-import { studentProfiles } from "@/src/entities/students/info";
+import client from "@/tina/__generated__/client";
 
-export default function StudentsPage() {
+export const Metadata = () => {
+  return {
+    title: '学生'
+  }
+}
+
+
+export default async function StudentsPage() {
+  const result = await client.queries.studentConnection();
   return <main className="pt-6">
-    <StudentGroupPageStudentsList students={studentProfiles} />
+    <StudentGroupPageStudentsList {...result} />
   </main>
 }
