@@ -32,10 +32,10 @@ export const MainPageStudentGroup: React.FC<MainPageStudentGroupProps> = ({ grou
         </div>
 
         <div className="absolute -bottom-[100.5px] -right-[100.5px] ">
-          <Image alt="star icon" unoptimized src='/image/star.svg' width={200} height={200}></Image>
+          <Image alt="star icon" unoptimized src='uploads/image/star.svg' width={200} height={200}></Image>
         </div>
         <div className="absolute -bottom-[100.5px] -left-[100.5px] ">
-          <Image alt="star icon" unoptimized src='/image/star.svg' width={200} height={200}></Image>
+          <Image alt="star icon" unoptimized src='uploads/image/star.svg' width={200} height={200}></Image>
         </div>
       </div>
 
