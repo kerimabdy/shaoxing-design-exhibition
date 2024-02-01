@@ -1,19 +1,33 @@
 import { StudentGroupPage } from "@/src/page/group";
-import { groups } from "@/src/entities/groups/info";
-import { Group } from "@/src/entities/groups/types";
+import client from "@/tina/__generated__/client";
+import { Metadata, ResolvingMetadata } from "next";
 
-const findGroup = (groupName: string): Group | undefined => {
-  return groups.find(group => group.name === groupName);
-};
+type Props = {
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
 
-export default function AppStudentGroupPage({ params }: { params: { slug: string } }) {
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  // fetch data
+  const result = await client.queries.studentGroup({ relativePath: `${params.slug}.md` })
 
+  return {
+    title: `${result.data.studentGroup.name} 班`,
+  }
+}
 
-  const group = findGroup(params.slug);
+export default async function AppStudentGroupPage({
+  params,
+}: Props) {
+  const result = await client.queries.studentGroup({ relativePath: `${params.slug}.md` })
 
   return (
     <main>
-      {group && <StudentGroupPage group={group} ></StudentGroupPage>}
+      <StudentGroupPage {...result} ></StudentGroupPage>
     </main>
   )
 }

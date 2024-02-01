@@ -5,8 +5,7 @@ import { MainPageClassTopics } from "./ui/course-topics"
 import { CourseIntro } from "./ui/course-intro"
 import { MainPageStudentGroup } from "./ui/student-group"
 import { MainPageStamp } from "./ui/stamp"
-import { groups } from "@/src/entities/groups/info"
-import { MainPageContentQuery } from "@/tina/__generated__/types"
+import { MainPageContentQuery, StudentGroup } from "@/tina/__generated__/types"
 import { useTina } from "tinacms/dist/react"
 
 
@@ -16,6 +15,8 @@ export const MainPage = (props: {
   query: string
 }) => {
   const { data } = useTina(props)
+
+  const studentGroups = data.studentGroupConnection?.edges?.map(studentGroup => studentGroup?.node as StudentGroup) || []
   return (
     <div>
       <MainPageHero {...data.pages} />
@@ -30,8 +31,8 @@ export const MainPage = (props: {
       })
       }
 
-      {groups.map(group => {
-        return <MainPageStudentGroup key={group.name} group={group} />
+      {studentGroups && studentGroups.map(group => {
+        return <MainPageStudentGroup key={group.name} {...group} />
       })}
     </div>
   )

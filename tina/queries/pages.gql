@@ -49,4 +49,31 @@ query mainPageContent($relativePath: String!, $before: String, $after: String, $
       }
     }
   }
+
+  studentGroupConnection {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...StudentGroupParts
+      }
+    }
+  }
 }

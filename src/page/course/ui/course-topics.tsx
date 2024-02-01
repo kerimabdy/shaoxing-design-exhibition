@@ -11,10 +11,10 @@ export const CoursePageCourseTopics = (props: MainPageContentQuery["topicConnect
   return <div className=" w-full border-t border-zinc-800 px-8 pb-8">
     <div className="relative w-full mx-auto max-w-screen-md border-x border-zinc-800">
       <div className="absolute -top-[100.5px] -right-[100.5px] ">
-        <Image alt="star icon" unoptimized src='uploads/image/star.svg' width={200} height={200}></Image>
+        <Image alt="star icon" unoptimized src='/uploads/image/star.svg' width={200} height={200}></Image>
       </div>
       <div className="absolute -top-[100.5px] -left-[100.5px] ">
-        <Image alt="star icon" unoptimized src='uploads/image/star.svg' width={200} height={200}></Image>
+        <Image alt="star icon" unoptimized src='/uploads/image/star.svg' width={200} height={200}></Image>
       </div>
       <Accordion type="single" collapsible>
         {courseTopics.map(item => {

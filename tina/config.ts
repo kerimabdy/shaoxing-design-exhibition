@@ -2,6 +2,7 @@ import { defineConfig } from "tinacms";
 import Topic from "./collection/topics";
 import Pages from "./collection/pages";
 import Student from "./collection/student";
+import { StudentGroup } from "./collection/student-group";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -34,6 +35,7 @@ export default defineConfig({
       Topic,
       Pages,
       Student,
+      StudentGroup,
       // CourseIntroductionCollection,
       {
         name: "post",
