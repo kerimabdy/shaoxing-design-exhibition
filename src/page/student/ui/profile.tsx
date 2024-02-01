@@ -26,28 +26,28 @@ export const StudentPageProfile = (props: StudentQuery) => {
         </div>
 
         <div className="relative w-full mx-auto max-w-screen-md p-6   grid sm:grid-cols-2 gap-4">
-          <h4 className="text-base flex-grow font-semibold">籍贯</h4>
+          <h4 className="text-base text-zinc-500 flex-grow font-semibold">籍贯</h4>
           <div className=" flex-grow">
             <p data-tina-field={tinaField(props.student, 'hometown')} className='text-zinc-500 text-xl'>{props.student?.hometown}</p>
           </div>
         </div>
 
         <div className="relative w-full mx-auto max-w-screen-md p-6  grid sm:grid-cols-2 gap-4">
-          <h4 className="text-base flex-grow font-semibold">电话号码</h4>
+          <h4 className="text-base text-zinc-500 flex-grow font-semibold">电话号码</h4>
           <div className=" flex-grow">
             <p data-tina-field={tinaField(props.student, 'phoneNumber')} className='text-zinc-500 text-xl'>{props.student?.phoneNumber}</p>
           </div>
         </div>
 
         <div className="relative w-full mx-auto max-w-screen-md p-6  grid sm:grid-cols-2 gap-4">
-          <h4 className="text-base flex-grow font-semibold">邮箱</h4>
+          <h4 className="text-base text-zinc-500 flex-grow font-semibold">邮箱</h4>
           <div className=" flex-grow">
             <p data-tina-field={tinaField(props.student, 'email')} className='text-zinc-500 text-xl'>{props.student?.email}</p>
           </div>
         </div>
 
         {props.student.skills && <div className="relative w-full mx-auto max-w-screen-md p-6 grid sm:grid-cols-2 gap-4">
-          <h4 className="text-base flex-grow font-semibold">掌握技能</h4>
+          <h4 className="text-base text-zinc-500 flex-grow font-semibold">掌握技能</h4>
           <div className=" flex-grow">
             <ul className="flex flex-wrap gap-2">
               {props.student?.skills.map(item => {
@@ -60,7 +60,7 @@ export const StudentPageProfile = (props: StudentQuery) => {
         </div>}
 
         {props.student.practicalExperiences && <div className="relative w-full mx-auto max-w-screen-md p-6 grid sm:grid-cols-2 gap-4">
-          <h4 className="text-base flex-grow font-semibold">能力实践经验</h4>
+          <h4 className="text-base text-zinc-500 flex-grow font-semibold">能力实践经验</h4>
           <div className=" flex-grow">
             <ul className="flex flex-wrap gap-2">
               {props.student?.practicalExperiences.map(item => {
@@ -73,7 +73,7 @@ export const StudentPageProfile = (props: StudentQuery) => {
         </div>}
 
         {props.student.personalAwards && <div className="relative w-full mx-auto max-w-screen-md p-6 grid sm:grid-cols-2 gap-4">
-          <h4 className="text-base flex-grow font-semibold">个人获奖</h4>
+          <h4 className="text-base text-zinc-500 flex-grow font-semibold">个人获奖</h4>
           <div className=" flex-grow">
             <ul className="flex flex-wrap gap-2">
               {props.student?.personalAwards.map(item => {
