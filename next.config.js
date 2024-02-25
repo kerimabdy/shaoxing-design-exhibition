@@ -12,6 +12,16 @@ const nextConfig = {
       },
     ];
   },
+  images: {
+    loader: 'custom',
+    loaderFile: '/src/widgets/loader.ts',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
+    ],
+  },
   experimental: {
     scrollRestoration: true,
   },

@@ -18,6 +18,7 @@
     "gsap": "^3.12.4",
     "lucide-react": "^0.309.0",
     "next": "14.0.4",
+    "next-cloudinary": "^5.20.0",
     "next-tinacms-cloudinary": "^4.4.5",
     "react": "^18",
     "react-dom": "^18",

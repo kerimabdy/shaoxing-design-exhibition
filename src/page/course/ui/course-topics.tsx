@@ -22,7 +22,7 @@ export const CoursePageCourseTopics = (props: MainPageContentQuery["topicConnect
             <AccordionTrigger>{item.title}</AccordionTrigger>
             <AccordionContent>
               <div className='bg-orange-500 overflow-hidden mb-6 relative rounded-xl w-full aspect-[4/3]'>
-                <Image src={item.heroImg || ""} className='object-cover' fill alt={item.title} />
+                <Image unoptimized src={item.heroImg || ""} className='object-cover' fill alt={item.title} />
               </div>
               <p>{item.description}</p>            </AccordionContent>
           </AccordionItem>

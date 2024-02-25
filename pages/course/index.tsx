@@ -17,7 +17,7 @@ export default function AppClassPage(result: {
   </main>
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const result = await client.queries.mainPageContent({ relativePath: `course.md` })
 
   return {
