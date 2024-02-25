@@ -7,15 +7,17 @@ import Image from 'next/image';
 import { MainPageContentQuery, Topic } from '@/tina/__generated__/types';
 import { tinaField } from 'tinacms/dist/react';
 
-Reeller.registerGSAP(gsap);
 
 
 export const MainPageClassTopics = (props: MainPageContentQuery['topicConnection']) => {
+
+
   const indexToSplit = 10;
   const classTopics = props.edges
   const original = classTopics?.map(topic => topic?.node) as Topic[]
   const firstHalf = original.splice(0, indexToSplit);
   const secondHalf = original;
+
   return <div className='flex flex-col gap-4 py-8 border-t border-zinc-800'>
     <TopicsReeler topics={firstHalf} reversed></TopicsReeler>
     <TopicsReeler topics={secondHalf}></TopicsReeler>
@@ -34,6 +36,7 @@ const TopicsReeler = ({ reversed = false, topics }: TopicsReelerProps) => {
   const wrapper = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    Reeller.registerGSAP(gsap);
     if (typeof window !== "undefined") {
       const reeller = new Reeller({
         container: container.current,
@@ -43,7 +46,7 @@ const TopicsReeler = ({ reversed = false, topics }: TopicsReelerProps) => {
         speed: 100,
       });
     }
-  }, [reversed]);
+  }, []);
 
   return <div ref={container} className="w-full overflow-hidden">
     <div ref={wrapper} className="flex gap-6">

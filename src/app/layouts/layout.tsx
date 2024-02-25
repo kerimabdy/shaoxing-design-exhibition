@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { Noto_Sans_SC } from 'next/font/google'
 import localFont from 'next/font/local'
-
-import './globals.css'
+import "@/src/app/styles/globals.css"
 import { Navigation } from '@/src/app/navigation'
 import { NoiseLayer } from '@/src/shared/components/ui/noise'
 
@@ -12,7 +11,7 @@ const noto = Noto_Sans_SC({
 })
 // Font files can be colocated inside of `app`
 const unboundedSans = localFont({
-  src: '../public/font/UnboundedSans.woff2',
+  src: '../../../public/font/UnboundedSans.woff2',
   variable: '--font-unbound',
   display: 'swap',
 })
@@ -25,13 +24,10 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en">
-
-      <body className={`${noto.variable} ${unboundedSans.variable} relative`}>
-        <Navigation />
-        {children}
-        <NoiseLayer />
-      </body>
-    </html>
+    <div className={`${noto.variable} ${unboundedSans.variable} relative`}>
+      <Navigation />
+      {children}
+      <NoiseLayer />
+    </div>
   )
 }

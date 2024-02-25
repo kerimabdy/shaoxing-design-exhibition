@@ -7,9 +7,10 @@ import gsap from 'gsap';
 import { Maybe, StudentGroup, StudentGroupStudents } from "@/tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
 
-Reeller.registerGSAP(gsap);
-
 export const MainPageStudentGroup = (props: StudentGroup) => {
+  useEffect(() => {
+    Reeller.registerGSAP(gsap);
+  }, [])
   return <div>
     <div className=" w-full border-t border-zinc-800 px-8">
       <div className="relative w-full mx-auto max-w-screen-md border-x border-zinc-800 p-6">

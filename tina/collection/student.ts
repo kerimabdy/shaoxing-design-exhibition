@@ -136,7 +136,6 @@ const Student: Collection = {
           list: true,
           ui: {
             itemProps: (item) => {
-              console.log(item)
               return { label: item.image }
             },
           },
