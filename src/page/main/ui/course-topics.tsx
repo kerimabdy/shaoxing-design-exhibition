@@ -46,7 +46,7 @@ const TopicsReeler = ({ reversed = false, topics }: TopicsReelerProps) => {
         speed: 100,
       });
     }
-  }, []);
+  }, [reversed]);
 
   return <div ref={container} className="w-full overflow-hidden">
     <div ref={wrapper} className="flex gap-6">

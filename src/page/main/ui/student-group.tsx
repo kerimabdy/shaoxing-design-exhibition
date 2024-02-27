@@ -62,7 +62,7 @@ const StudentsReel = ({ reversed = false, students }: StudentsReelProps) => {
         speed: 100,
       });
     }
-  }, []);
+  }, [reversed]);
 
   return <div ref={container} className="w-full overflow-hidden">
     <div ref={wrapper} className="flex gap-6">
