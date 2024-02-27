@@ -9,7 +9,7 @@ export const StudentPageProfile = (props: StudentQuery) => {
     <div className="relative flex  flex-col md:flex-row divide-x divide-zinc-800">
       <div className="w-full md:w-2/4 max-w-screen-md p-6">
         <div data-tina-field={tinaField(props.student, 'heroImg')} className="aspect-[3/4] sticky top-6 rounded-xl overflow-hidden">
-          <Image fill src={props.student.heroImg || ""} alt="student image" className=" object-cover" />
+          <Image unoptimized fill src={props.student.heroImg || ""} alt="student image" className=" object-cover" />
         </div>
       </div>
       <div className="flex-grow ">

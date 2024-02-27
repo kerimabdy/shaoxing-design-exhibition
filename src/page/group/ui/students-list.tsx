@@ -30,7 +30,7 @@ export const StudentGroupPageStudentsList = ({ students }: { students: Student[]
               <Link data-tina-field={student && tinaField(student, 'name')} key={student?.studentId} href={`/students/${student?._sys.breadcrumbs.join('/')}`}>
                 <div className='w-full flex flex-col gap-2' >
                   <div className='bg-orange-500 relative overflow-hidden rounded-xl w-full aspect-[3/4]'>
-                    <Image fill src={student?.heroImg || ""} alt="student image" className=" object-cover" />
+                    <Image unoptimized fill src={student?.heroImg || ""} alt="student image" className=" object-cover" />
                   </div>
                   <p className='text-zinc-500 text-xl leading-none'>{student?.name}</p>
                 </div>

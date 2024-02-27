@@ -70,7 +70,7 @@ const StudentsReel = ({ reversed = false, students }: StudentsReelProps) => {
         return (
           <div data-tina-field={student?.student && tinaField(student.student, 'name')} className='my-reel-item flex flex-col gap-2' key={student?.student?.studentId}>
             <div className='bg-orange-500 relative overflow-hidden rounded-xl w-96 max-w-[80vw] aspect-[2/3]'>
-              <Image fill src={student?.student?.heroImg || ''} alt="student image" className=" object-cover" />
+              <Image unoptimized fill src={student?.student?.heroImg || ''} alt="student image" className=" object-cover" />
             </div>
           </div>
         )
