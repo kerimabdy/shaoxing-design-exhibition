@@ -14,10 +14,10 @@ export const StudentGroupPageStudentsList = ({ students }: { students: Student[]
           <span className='px-4 border border-zinc-800 rounded-full bg-white bg-opacity-10 backdrop-blur-md leading-none py-2 text-zinc-500 text-base '>{students?.length} 学生</span>
         </div>
         <div className="absolute -bottom-[100.5px] -right-[100.5px] ">
-          <Image alt="star icon" unoptimized src='/uploads/image/star.svg' width={200} height={200}></Image>
+          <Image alt="star icon" unoptimized src='https://res.cloudinary.com/abdykerim/image/upload/v1708863014/uploads/image/star_zd40tc.svg' width={200} height={200}></Image>
         </div>
         <div className="absolute -bottom-[100.5px] -left-[100.5px] ">
-          <Image alt="star icon" unoptimized src='/uploads/image/star.svg' width={200} height={200}></Image>
+          <Image alt="star icon" unoptimized src='https://res.cloudinary.com/abdykerim/image/upload/v1708863014/uploads/image/star_zd40tc.svg' width={200} height={200}></Image>
         </div>
       </div>
     </div>
