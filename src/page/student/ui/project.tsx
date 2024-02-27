@@ -32,7 +32,7 @@ export const StudentPageProject = (props: StudentPageProjectProp) => {
     </div>
     <Carousel className="w-full my-6">
       <CarouselContent className="  [&>:first-child]:ml-[12.5%] [&>:last-child]:mr-[12.5%]">
-        {props?.images?.map((image, i) => (
+        {props.images && props.images.map((image, i) => (
           <CarouselItem className="basis-3/4" key={image?.image || i}>
             <div className="px-1">
               <div data-tina-field={image && tinaField(image)} className="overflow-hidden rounded-xl aspect-video relative">
@@ -42,21 +42,22 @@ export const StudentPageProject = (props: StudentPageProjectProp) => {
           </CarouselItem>
         ))}
 
-        <CarouselItem className="basis-3/4">
+        {props.video && <CarouselItem className="basis-3/4">
           <div className="px-1">
             <div data-tina-field={props.video && tinaField(props, 'video')} className="overflow-hidden rounded-xl aspect-video relative">
               <video muted playsInline controls src={props?.video || ""} className="object-cover"></video>
             </div>
           </div>
-        </CarouselItem>
+        </CarouselItem>}
 
-        <CarouselItem className="basis-3/4 last:ml-[12.5%]">
+        {props.qr && <CarouselItem className="basis-3/4 last:ml-[12.5%]">
           <div className="px-1">
             <div data-tina-field={props.qr && tinaField(props, 'qr')} className="overflow-hidden flex justify-center items-center border-2 border-zinc-500 rounded-xl aspect-video relative">
               <Image width={200} height={200} src={props?.qr || ""} alt='qr code' className="w-52 h-52 rounded-lg" />
             </div>
           </div>
         </CarouselItem>
+        }
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />
