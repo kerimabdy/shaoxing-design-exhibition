@@ -54,7 +54,7 @@ const TopicsReeler = ({ reversed = false, topics }: TopicsReelerProps) => {
         return (
           <div data-tina-field={tinaField(item, 'title')} className='my-reel-item flex flex-col gap-2' key={item?.title}>
             <div className='bg-orange-500 overflow-hidden relative rounded-xl w-96 max-w-[80vw] aspect-[4/3]'>
-              <Image src={item?.heroImg || ''} className='object-cover' fill alt={item?.title} />
+              <Image unoptimized src={item?.heroImg || ''} className='object-cover' fill alt={item?.title} />
             </div>
             <span className='text-zinc-500 text-xl leading-none'>({item?.title})</span>
           </div>
