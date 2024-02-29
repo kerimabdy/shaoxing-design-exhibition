@@ -55,6 +55,35 @@ const Pages: Collection = {
               type: "image",
             }
           ],
+        },
+        {
+          name: "videoSection",
+          label: "Video Section",
+          fields: [
+            {
+              label: "Videos",
+              name: "videos",
+              type: "object",
+              list: true,
+              ui: {
+                itemProps: (item) => {
+                  return { label: item.name }
+                }
+              },
+              fields: [
+                {
+                  type: "string",
+                  label: "Name",
+                  name: "name",
+                },
+                {
+                  type: "image",
+                  label: "Video",
+                  name: "video",
+                }
+              ]
+            },
+          ]
         }
       ],
     },

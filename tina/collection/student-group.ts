@@ -23,29 +23,6 @@ export const StudentGroup: Collection = {
       label: "Stamp",
       name: "stamp",
     },
-    {
-      label: "Videos",
-      name: "videos",
-      type: "object",
-      list: true,
-      ui: {
-        itemProps: (item) => {
-          return { label: item.name }
-        }
-      },
-      fields: [
-        {
-          type: "string",
-          label: "Name",
-          name: "name",
-        },
-        {
-          type: "image",
-          label: "Video",
-          name: "video",
-        }
-      ]
-    },
 
     {
       label: 'Students',
