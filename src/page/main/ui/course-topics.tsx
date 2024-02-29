@@ -2,7 +2,6 @@
 import React, { useEffect, useRef } from 'react';
 import Reeller from 'reeller';
 import gsap from 'gsap';
-import { classTopics } from '@/src/entities/class/info';
 import Image from 'next/image';
 import { MainPageContentQuery, Topic } from '@/tina/__generated__/types';
 import { tinaField } from 'tinacms/dist/react';

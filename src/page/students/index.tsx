@@ -1,7 +1,5 @@
 "use client"
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { Student, StudentConnectionQuery } from "@/tina/__generated__/types";
 import { useTina } from "tinacms/dist/react";
 import { StudentGroupPageStudentsList } from "../group/ui/students-list";

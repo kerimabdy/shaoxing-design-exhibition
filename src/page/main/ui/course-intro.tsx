@@ -1,5 +1,3 @@
-import { PagesQuery } from "@/tina/__generated__/types";
-import Image from "next/image";
 import React from "react";
 import { tinaField } from "tinacms/dist/react";
 

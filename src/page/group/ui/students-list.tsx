@@ -2,12 +2,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Student, StudentConnectionQuery } from "@/tina/__generated__/types";
-import { tinaField, useTina } from "tinacms/dist/react";
+import { Student } from "@/tina/__generated__/types";
+import { tinaField } from "tinacms/dist/react";
 
 export const StudentGroupPageStudentsList = ({ students }: { students: Student[] }) => {
   return <div>
-    <div className="w-full border-t border-zinc-800 ">
+    <div className="w-full border-t border-zinc-800 px-8">
       <div className="relative w-full mx-auto max-w-screen-md border-x border-zinc-800 p-6">
         <div className="flex flex-wrap justify-between gap-4 items-end">
           <h2 className='text-6xl leading-none '>学生</h2>
