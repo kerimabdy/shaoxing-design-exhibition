@@ -15,13 +15,14 @@ const Student: Collection = {
       type: "string",
       label: "Name",
       name: "name",
-      isTitle: true,
+      // isTitle: true,
       required: true,
     },
     {
       type: "string",
       label: "Students ID",
       name: "studentId",
+      isTitle: true,
       required: true,
     },
     {
