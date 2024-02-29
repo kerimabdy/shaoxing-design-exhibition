@@ -1,10 +1,10 @@
 'use client'
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 export const NoiseLayer = () => {
-  return <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden opacity-10 z-30 pointer-events-none">
+  return <div className="absolute pointer-events-none top-0 left-0 right-0 bottom-0 overflow-hidden opacity-10 z-30 pointer-events-none">
     <div className="shake" style={{
-      backgroundImage: `url(/noise.png)`,
+      backgroundImage: `url(https://res.cloudinary.com/abdykerim/image/upload/v1709233048/uploads/image/noise_yvmxbw.png)`,
       backgroundSize: "auto",
       backgroundPosition: "left top",
       backgroundRepeat: "repeat",

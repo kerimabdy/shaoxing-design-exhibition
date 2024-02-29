@@ -10,11 +10,11 @@ export const CoursePageCourseTopics = (props: MainPageContentQuery["topicConnect
   const courseTopics = props.edges?.map(topic => topic?.node) as Topic[]
   return <div className=" w-full border-t border-zinc-800 px-8 pb-8">
     <div className="relative w-full mx-auto max-w-screen-md border-x border-zinc-800">
-      <div className="absolute -top-[100.5px] -right-[100.5px] ">
-        <Image alt="star icon" unoptimized src='https://res.cloudinary.com/abdykerim/image/upload/v1708863014/uploads/image/star_zd40tc.svg' width={200} height={200}></Image>
+      <div className="absolute pointer-events-none -top-[100.5px] -right-[100.5px] ">
+        <Image alt="star icon" className="pointer-events-none" unoptimized src='https://res.cloudinary.com/abdykerim/image/upload/v1708863014/uploads/image/star_zd40tc.svg' width={200} height={200}></Image>
       </div>
-      <div className="absolute -top-[100.5px] -left-[100.5px] ">
-        <Image alt="star icon" unoptimized src='https://res.cloudinary.com/abdykerim/image/upload/v1708863014/uploads/image/star_zd40tc.svg' width={200} height={200}></Image>
+      <div className="absolute pointer-events-none -top-[100.5px] -left-[100.5px] ">
+        <Image alt="star icon" className="pointer-events-none" unoptimized src='https://res.cloudinary.com/abdykerim/image/upload/v1708863014/uploads/image/star_zd40tc.svg' width={200} height={200}></Image>
       </div>
       <Accordion type="single" collapsible>
         {courseTopics.map(item => {

@@ -27,11 +27,11 @@ export const MainPageStudentGroup = (props: StudentGroup) => {
           </Link>
         </div>
 
-        <div className="absolute -bottom-[100.5px] -right-[100.5px] ">
-          <Image alt="star icon" unoptimized src='https://res.cloudinary.com/abdykerim/image/upload/v1708863014/uploads/image/star_zd40tc.svg' width={200} height={200}></Image>
+        <div className="absolute pointer-events-none -bottom-[100.5px] -right-[100.5px] ">
+          <Image alt="star icon" className="pointer-events-none" unoptimized src='https://res.cloudinary.com/abdykerim/image/upload/v1708863014/uploads/image/star_zd40tc.svg' width={200} height={200}></Image>
         </div>
-        <div className="absolute -bottom-[100.5px] -left-[100.5px] ">
-          <Image alt="star icon" unoptimized src='https://res.cloudinary.com/abdykerim/image/upload/v1708863014/uploads/image/star_zd40tc.svg' width={200} height={200}></Image>
+        <div className="absolute pointer-events-none -bottom-[100.5px] -left-[100.5px] ">
+          <Image alt="star icon" className="pointer-events-none" unoptimized src='https://res.cloudinary.com/abdykerim/image/upload/v1708863014/uploads/image/star_zd40tc.svg' width={200} height={200}></Image>
         </div>
       </div>
 
