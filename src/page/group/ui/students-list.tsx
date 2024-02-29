@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Student, StudentConnectionQuery } from "@/tina/__generated__/types";
+import { Student } from "@/tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
 
 export const StudentGroupPageStudentsList = ({ students }: { students: Student[] }) => {
