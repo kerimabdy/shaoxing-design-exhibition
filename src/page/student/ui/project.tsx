@@ -35,8 +35,8 @@ export const StudentPageProject = (props: StudentPageProjectProp) => {
         {props.images && props.images.map((image, i) => (
           <CarouselItem className="basis-3/4" key={image?.image || i}>
             <div className="px-1">
-              <div data-tina-field={image && tinaField(image)} className="overflow-hidden rounded-xl aspect-video relative">
-                <Image src={image?.image || ""} alt={image?.image || ""} fill className="object-cover" />
+              <div data-tina-field={image && tinaField(image)} className="bg-zinc-900 overflow-hidden rounded-xl aspect-video relative">
+                <Image unoptimized src={image?.image || ""} alt={image?.image || ""} fill className="object-contain" />
               </div>
             </div>
           </CarouselItem>
@@ -44,7 +44,7 @@ export const StudentPageProject = (props: StudentPageProjectProp) => {
 
         {props.video && <CarouselItem className="basis-3/4">
           <div className="px-1">
-            <div data-tina-field={props.video && tinaField(props, 'video')} className="overflow-hidden rounded-xl aspect-video relative">
+            <div data-tina-field={props.video && tinaField(props, 'video')} className="bg-zinc-900 overflow-hidden rounded-xl aspect-video relative">
               <video muted playsInline controls src={props?.video || ""} className="object-cover"></video>
             </div>
           </div>
@@ -52,8 +52,8 @@ export const StudentPageProject = (props: StudentPageProjectProp) => {
 
         {props.qr && <CarouselItem className="basis-3/4 last:ml-[12.5%]">
           <div className="px-1">
-            <div data-tina-field={props.qr && tinaField(props, 'qr')} className="overflow-hidden flex justify-center items-center border-2 border-zinc-500 rounded-xl aspect-video relative">
-              <Image width={200} height={200} src={props?.qr || ""} alt='qr code' className="w-52 h-52 rounded-lg" />
+            <div data-tina-field={props.qr && tinaField(props, 'qr')} className="bg-zinc-900 overflow-hidden flex justify-center items-center rounded-xl aspect-video relative">
+              <Image unoptimized width={200} height={200} src={props?.qr || ""} alt='qr code' className="max-w-52 max-h-full object-contain w-full rounded-lg" />
             </div>
           </div>
         </CarouselItem>
