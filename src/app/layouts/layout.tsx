@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <div className={`${noto.variable} ${unboundedSans.variable} relative w-full overflow-x-hidden`}>
+    <div className={`${noto.variable} ${unboundedSans.variable} bg-black relative w-full overflow-x-hidden`}>
       <Navigation />
       {children}
       <NoiseLayer />
